@@ -40,24 +40,28 @@ time.sleep(3)
 checkboxes = driver.find_elements(By.CLASS_NAME, "ps-checkbox")
 enroll_button = driver.find_element(By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
 
-for idx, checkbox in enumerate(checkboxes):
-  checkboxes = driver.find_elements(By.CLASS_NAME, "ps-checkbox")
-  enroll_button = driver.find_element(By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
-  to_click = checkboxes.copy()
-  to_click.remove(checkboxes[idx])
+try:
+  while True:
+    for idx, checkbox in enumerate(checkboxes):
+      checkboxes = driver.find_elements(By.CLASS_NAME, "ps-checkbox")
+      enroll_button = driver.find_element(By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
+      to_click = checkboxes.copy()
+      to_click.remove(checkboxes[idx])
 
-  for click_checkbox in to_click:
-    click_checkbox.click()
+      for click_checkbox in to_click:
+        click_checkbox.click()
 
-  enroll_button.click()
+      enroll_button.click()
 
-  time.sleep(2)
+      time.sleep(2)
 
-  driver.find_element(By.ID, "#ICYes").click()
+      driver.find_element(By.ID, "#ICYes").click()
 
-  time.sleep(5)
+      time.sleep(5)
 
-  # go back to the shopping cart page
-  shopping_cart_item = driver.find_element(By.ID, "win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0")
-  shopping_cart_item.click()
-  time.sleep(2)
+      # go back to the shopping cart page
+      shopping_cart_item = driver.find_element(By.ID, "win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0")
+      shopping_cart_item.click()
+      time.sleep(2)
+except KeyboardInterrupt:
+  pass
