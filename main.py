@@ -51,7 +51,7 @@ for idx, checkbox in enumerate(checkboxes):
 
   enroll_button.click()
 
-  time.sleep(1)
+  time.sleep(2)
 
   driver.find_element(By.ID, "#ICYes").click()
 
@@ -60,4 +60,4 @@ for idx, checkbox in enumerate(checkboxes):
   # go back to the shopping cart page
   shopping_cart_item = driver.find_element(By.ID, "win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0")
   shopping_cart_item.click()
-  time.sleep(1)
+  time.sleep(2)
