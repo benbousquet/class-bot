@@ -56,15 +56,18 @@ enroll_button = driver.find_element(By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
 try:
   while True:
     for idx, checkbox in enumerate(checkboxes):
-      # ERRORS OUT ;( makes me sad
-      # waitOnElement(driver, By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
+      # Will error out if your computer sleep!!
+      waitOnElement(driver, By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
       checkboxes = driver.find_elements(By.CLASS_NAME, "ps-checkbox")
       enroll_button = driver.find_element(By.ID, "DERIVED_SSR_FL_SSR_ENROLL_FL")
       to_click = checkboxes.copy()
       to_click.remove(checkboxes[idx])
 
       for click_checkbox in to_click:
-        click_checkbox.click()
+        try:
+          click_checkbox.click()
+        except:
+          print("Could not uncheck box :(")
 
       enroll_button.click()
 
