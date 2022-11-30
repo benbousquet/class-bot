@@ -42,6 +42,7 @@ waitOnElement(driver, By.ID, "win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0")
 shopping_cart_item = driver.find_element(By.ID, "win2divSCC_LO_FL_WRK_SCC_GROUP_BOX_1$0")
 shopping_cart_item.click()
 
+
 waitOnElement(driver, By.ID, "GRID_TERM_SRC5$0_row_0")
 
 semester = driver.find_element(By.ID, "GRID_TERM_SRC5$0_row_0")
