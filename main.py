@@ -10,7 +10,7 @@ load_dotenv()
 
 def waitOnElement(driver, by, identifier):
   try:
-    auth_done = WebDriverWait(driver, 120).until(
+    WebDriverWait(driver, 120).until(
       EC.presence_of_element_located((by, identifier))
     )
   except:
