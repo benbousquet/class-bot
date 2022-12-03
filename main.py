@@ -3,10 +3,25 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
+import firebase_admin
+from firebase_admin import credentials, db
 import os
 import time
 
 load_dotenv()
+
+db_url = os.environ.get("db_url")
+cred = credentials.Certificate("./firebase-pk.json")
+firebase_admin.initialize_app(cred, {
+  'databaseURL': db_url
+})
+ref = db.reference("/")
+ref.set({
+  	"Classes":
+	{
+		"Class1": -1
+	}
+})
 
 def waitOnElement(driver, by, identifier):
   try:
@@ -97,4 +112,5 @@ def run():
     run()
 
 if __name__ == "__main__":
+  # connectFirebase()
   run()
