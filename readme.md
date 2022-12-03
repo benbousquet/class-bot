@@ -1,6 +1,6 @@
 # Class Bot
 
-Python script that uses selenium to automatically sign you up for classes
+Python script that uses selenium to automatically sign you up for ASU classes
 
 ## Installation
 
@@ -11,6 +11,8 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
+Update ".env sample" file with username and password then change name to ".env" 
 
 ```python
 python main.py
