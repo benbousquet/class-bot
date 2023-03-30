@@ -23,6 +23,8 @@ def run():
   # incase of crash re-run
   try:
     driver = webdriver.Chrome()
+    # uncomment if you are using windows
+    # driver = webdriver.Chrome(executable_path="c:\webdrivers\chromedriver.exe")
     driver.get("https://webapp4.asu.edu/myasu/?action=addclass&strm=2227")
 
     username_field = driver.find_element(By.NAME, "username")
