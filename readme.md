@@ -42,7 +42,7 @@ Install senenium web driver
 
 1. Update ".env sample" file with username and password then change name to ".env" 
 2. Add class you want to your shopping cart
-3. Run the following command `python main.py`
+3. Run the following command ```python python main.py```
 
 After a single class is signed up for, the program will crash (as intended) but due to slow page loading or bad requests it might crash after a few hours of running so make sure to check it often.
 ## Features
