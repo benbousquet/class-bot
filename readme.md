@@ -29,7 +29,7 @@ Install dependencies
   pip install -r requirements.txt
 ```
 
-Install senenium web driver
+Install Selenium Web Driver
 - MacOS: https://medium.com/@mintholic1/installing-selenium-webdriver-on-your-mac-1ef5fec7efda
 - Windows: https://youtu.be/Xjv1sY630Uc?t=255
 
