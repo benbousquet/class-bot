@@ -40,7 +40,7 @@ Install Selenium Web Driver
 
 ## Usage
 
-1. Update ".env sample" file with username and password then change name to ".env" 
+1. Update ".env sample" file with username and password then change filename to ".env" 
 2. Add class you want to your shopping cart
 3. Run the following command 
 ```bash 
